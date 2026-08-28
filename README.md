@@ -2,6 +2,8 @@
 
 Internal state is **not** H×W×3. It is one scalar per cell of each **prime lattice** (1×1, 2×2, 3×3, 5×5, …). Color is three incommensurate phases of that scalar. Raster is an adapter.
 
+Sibling of **[CalcNet](#calcnet)** (`calcnet.py`) — tiny explicit-Jacobian calculus maps. CalcNet is 1-D / ODE devices; ScaleField is the multi-scale color field.
+
 This repo is the v1 **codec** plus the generative experiments that came out of it. The codec works. Generation is still an exploration: a few frozen looks, a live wallpaper, and a ceiling on this machine (i5-6500 / 15 GB).
 
 ## Frozen artifacts (do not overwrite)
@@ -31,11 +33,13 @@ cd v1
 python demo.py   # if present, else: python train.py --help
 ```
 
-**Wallpaper** (no training, ~2 ms/frame, writes `/dev/shm/scalefield-wallpaper.ppm`):
+**Wallpaper** (no training, ~2 ms/frame). A window titled **ScaleField wallpaper** should open. Frames also land at `/dev/shm/scalefield-wallpaper.ppm`.
 
 ```bash
 cd gen2
 python wallpaper.py --size 320 --period 3 --fps 30
+# if the window is missing:
+imv -s full -u nearest_neighbour -w 'ScaleField  wallpaper' /dev/shm/scalefield-wallpaper.ppm
 # pause / resume
 kill -USR1 $(cat runs/wallpaper/wallpaper.pid)
 ```
@@ -84,3 +88,11 @@ gen4/        next-frame / video sketches (code only)
 ```
 
 Hardware this was run on: Intel i5-6500, 15 GB RAM, HD 530. One trainer at a time.
+
+## CalcNet
+
+[`calcnet.py`](calcnet.py) — tiny neural devices that *are* calculus maps (explicit Jacobian, stupid-small param count). Design notes: [`CALCNET_PLAN.md`](CALCNET_PLAN.md), [`SCALEFIELD.md`](SCALEFIELD.md).
+
+```bash
+python calcnet.py
+```

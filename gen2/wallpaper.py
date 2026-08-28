@@ -165,7 +165,10 @@ def main():
     base = new_scene(gen, rng)
     live.set_all(base)
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    _atomic_ppm(args.out, live.rgb())
+    rgb0 = live.rgb()
+    _atomic_ppm(args.out, rgb0)
+    # folder copy so a file manager / second imv can see it
+    _atomic_ppm(HERE / "runs/wallpaper/live.ppm", rgb0)
     pid_path = HERE / "runs/wallpaper/wallpaper.pid"
     pid_path.parent.mkdir(parents=True, exist_ok=True)
     pid_path.write_text(str(os.getpid()) + "\n")
@@ -206,7 +209,9 @@ def main():
         amp = max(1.25 * float(std[idx]), 0.35 * float(mean_abs[idx]), 1e-3)
         phase = np.sin(2.0 * np.pi * (t_param / period))
         live.set_amp(idx, float(base[idx]) + amp * phase)
-        _atomic_ppm(args.out, live.rgb())
+        rgb = live.rgb()
+        _atomic_ppm(args.out, rgb)
+        _atomic_ppm(HERE / "runs/wallpaper/live.ppm", rgb)
         if frame % max(1, int(args.fps)) == 0:
             print(f"  {param_label(idx)}  phase={phase:+.2f}", flush=True)
         frame += 1
