@@ -1,0 +1,16 @@
+ScaleGen4 — next frame. Frozen unfold stays frozen.
+
+gen3/runs/good-unfold is the stills generator (1→31). Do not touch it,
+or gen2/runs/good-reals, or gen/runs/cool-gmm.
+
+This version is video: given a populated c_t, guess c_{t+1}.
+Default is identity (copy the last frame) plus a residual at each prime:
+
+  Δ_p = W_p [ c_{t+1,<p} ; c_t through p ] + b
+  c_{t+1,p} = c_{t,p} + Δ_p
+
+Teacher-forced ridge on consecutive frames. Rollout is ancestral.
+Start from a real encoded frame, never from noise.
+
+Clips: short Wikimedia nature/motion (water, fire, wind, rain, clouds).
+Field is the frozen v1 sharp ladder (N=3359). One trainer on this box.

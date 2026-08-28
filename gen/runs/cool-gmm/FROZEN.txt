@@ -1,0 +1,3 @@
+Frozen ScaleGen GMM — epoch 563, 15 components, nll≈32.6
+N_field=3359  k=32  Do not overwrite. Load: runs/cool-gmm/scalegen
+New work goes in scalefield/gen2/

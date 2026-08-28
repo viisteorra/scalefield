@@ -1,0 +1,46 @@
+{
+  "ckpt": "runs/live/best.npz",
+  "formula": "C(u)=sum_ell W_{exp,rip,const,logsin,quad,exp,const,quad,exp,rip,logsin,gabor,lin}(r^ell u) \u00b7 b[ell]  | x=13 ch=3 i=7 r=0.74  N=273 sparse=0.06",
+  "nparams": 273,
+  "x": 13,
+  "i": 7,
+  "r": 0.7399999999999999,
+  "train_mse": 0.008376909130741269,
+  "train_fovea": 0.010816018546792051,
+  "val_mse": 0.006677895856652747,
+  "val_fovea": 0.009464665619068023,
+  "val_mse_std": 0.007894597155485803,
+  "val_syn": {
+    "mse": 0.0035166892354541804,
+    "n": 20,
+    "std": 0.004305556727342431
+  },
+  "val_real": {
+    "mse": 0.013000309099049876,
+    "n": 10,
+    "std": 0.009483617003339408
+  },
+  "train_syn": {
+    "mse": 0.005555048769911178,
+    "n": 80,
+    "std": 0.007612049711842915
+  },
+  "train_real": {
+    "mse": 0.014020629852401451,
+    "n": 40,
+    "std": 0.007451058252643772
+  },
+  "sparsity": 0.16959706959706958,
+  "val_n": 30,
+  "pixels": 12288,
+  "compression": 45.010989010989015,
+  "val_bar_0.02": true,
+  "syn_bar_0.02": true,
+  "previews": {
+    "val_grid": "runs/live/test/val_grid.png",
+    "val_syn": "runs/live/test/val_syn.png",
+    "val_real": "runs/live/test/val_real.png",
+    "train_grid": "runs/live/test/train_grid.png",
+    "mean_field": "runs/live/test/mean_field_256.png"
+  }
+}

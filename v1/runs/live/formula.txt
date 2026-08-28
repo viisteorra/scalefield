@@ -1,0 +1,1 @@
+C(u)=sum_p DCT_p(foveal(u); resample(S,p))·phase + edge + chord  | p=[1×1:dc,2×2:balance,3×3:dct,5×5:dct,7×7:dct,11×11:dct,13×13:dct,17×17:dct,19×19:dct,23×23:dct,29×29:dct,31×31:dct]  N=3359  foveal=1.15  edge=0.55 chord=0.12  sparse=0.95  phases=3×256

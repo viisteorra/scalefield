@@ -1,0 +1,7 @@
+Frozen ScaleGen2 ELEM — 1×1 + 2×2 + 3×3 + 5×5 + 7×7 + 11×11 + 13×13 × 4 phases.
+n=1509. Residual fit of 540 photos, leftover var 0.0079, recon MSE 0.0063.
+Prefix is 1+2+3 (53 nums, PCA 24). Unfold hold 5:0.68 7:0.67 11:0.12 13:0.60.
+Sampling skips lattices with hold < 0.35 (so 11×11 is left at 0).
+Soft scene-blobs; GMM on this box is maxed (10×N(24), nll flat).
+Do not overwrite. Load stem: gen2/runs/matrices-4ph/scalegen
+Wallpaper is a different freeze: gen2/runs/wallpaper

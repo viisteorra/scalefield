@@ -1,0 +1,33 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.python-version
+.DS_Store
+
+# downloaded photos (Picsum). Recreate with data.py if needed.
+gen2/data/real_raw/
+data/real_raw/
+data/train/
+runs/live/latest.npz
+
+# live trainer junk
+**/metrics.jsonl
+**/*.tmp.npz
+**/*.tmp.png
+**/*.pid
+gen2/runs/night/
+gen2/runs/live/
+gen/runs/live/
+gen3/runs/live/
+gen4/runs/
+gen4/data/
+
+# duplicate codec snapshot
+v1/runs/live/latest.npz
+
+# huge optional banks (re-peel from photos)
+gen2/runs/picsum540.field.npz
+gen2/runs/residual19.field.npz
+gen2/runs/abstract-v1/
+gen2/runs/struct-linear/

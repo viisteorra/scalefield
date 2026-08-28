@@ -1,0 +1,1 @@
+C(u)=sum_ell W_{exp,gabor,const,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp}((u-μ)/r^ell) · b[ell]  | x=32 ch=3 i=24 r=0.88  N=2304 sparse=0.14

@@ -1,0 +1,31 @@
+{
+  "epoch": 0,
+  "stage": "ep 0 fit",
+  "tag": "fit",
+  "primes": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31
+  ],
+  "nparams": 3359,
+  "formula": "C(u)=sum_p DCT_p(foveal(u); resample(S,p))\u00b7phase + edge + chord  | p=[1\u00d71:dc,2\u00d72:balance,3\u00d73:dct,5\u00d75:dct,7\u00d77:dct,11\u00d711:dct,13\u00d713:dct,17\u00d717:dct,19\u00d719:dct,23\u00d723:dct,29\u00d729:dct,31\u00d731:dct]  N=3359  foveal=1.15  edge=0.55 chord=0.12  sparse=0.95  phases=3\u00d7256",
+  "train_mse": 0.000521241219060722,
+  "val_mse": 0.0010076151949951092,
+  "val_fovea": 0.00028194043630333596,
+  "sparsity": 0.7719658628560087,
+  "foveal": 1.15,
+  "edge_gain": 0.55,
+  "chord_gain": 0.12,
+  "lam": 0.0001,
+  "chord_steps": 1,
+  "best": true
+}

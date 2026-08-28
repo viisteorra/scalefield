@@ -1,0 +1,10 @@
+{
+  "epoch": 850,
+  "tag": "stop",
+  "nll": 9.897393067725728,
+  "n_comp": 12,
+  "n_data": 290,
+  "k": 32,
+  "k_coarse": 8,
+  "formula": "ScaleGen2  z_coarse~GMM=12\u00d7N(8)  z_fine=W z_c+b  k=32 kc=8  N_field=3359"
+}

@@ -1,0 +1,14 @@
+ScaleGen — generative model on ScaleField v1 latents.
+
+The picture is not H×W×3. It is a PrimeField coefficient vector c
+(independent prime DCT grids, N = sum p², default through 31 → 3359).
+
+Encode: image → c  (least squares on the field)
+Generate: z ~ tiny prior → c = μ + B z → raster at any res
+Transform: do linear / Euler / mix on z or c, then decode
+
+Prior is a PCA Gaussian on the empirical cloud of c from stills.
+With ~120 training images, rank ≤ 119. That is the generative
+capacity — morphs of the learned cloud, not ImageNet.
+
+Do not put a U-Net or pixel diffusion in here. Work in c.

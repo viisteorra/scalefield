@@ -1,0 +1,1 @@
+C(u)=sum_ell W_{exp,rip,const,logsin,quad,exp,const,quad,exp,rip,logsin,gabor,lin}(r^ell u) · b[ell]  | x=13 ch=3 i=7 r=0.74  N=273 sparse=0.06

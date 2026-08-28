@@ -1,0 +1,27 @@
+{
+  "formula": "C(u)=sum_p DCT_p(foveal(u); resample(S,p))\u00b7phase + edge + chord  | p=[1\u00d71:dc,2\u00d72:balance,3\u00d73:dct,5\u00d75:dct,7\u00d77:dct,11\u00d711:dct,13\u00d713:dct,17\u00d717:dct,19\u00d719:dct,23\u00d723:dct,29\u00d729:dct,31\u00d731:dct]  N=3359  foveal=1.15  edge=0.55 chord=0.12  sparse=0.95  phases=3\u00d7256",
+  "nparams": 3359,
+  "primes": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31
+  ],
+  "foveal": 1.15,
+  "edge_gain": 0.55,
+  "chord_gain": 0.12,
+  "best_val": 0.0004416812509797445,
+  "epoch": 0,
+  "size": 96,
+  "out_res": 360,
+  "board": "runs/live/watch/board.png",
+  "html": "runs/live/watch/index.html"
+}

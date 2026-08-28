@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="2">
+<title>ScaleField v1 watch</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; background: #111318; color: #ececf1;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  header {
+    position: sticky; top: 0; padding: 18px 24px 14px;
+    background: #111318ee; border-bottom: 1px solid #2a2d36;
+  }
+  header h1 { margin: 0 0 6px; font-size: 18px; font-weight: 650; }
+  header p { margin: 0; color: #9aa0ae; font-size: 13px; }
+  .mse { color: #8fd99b; }
+  main {
+    padding: 22px 24px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 32px;
+  }
+  .pair { display: flex; gap: 10px; align-items: flex-start; margin: 0; }
+  figure { margin: 0; }
+  figcaption {
+    padding: 8px 2px 0; font-size: 12px; letter-spacing: .08em;
+    color: #9ec4ff; text-transform: uppercase;
+  }
+  img {
+    width: 220px; height: 220px; object-fit: cover; background: #000;
+    image-rendering: pixelated; border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>ScaleField v1  <span class="mse">val=0.0010</span>
+      N=3359  stage ep 0 fit</h1>
+  <p>C(u)=sum_p DCT_p(foveal(u); resample(S,p))·phase + edge + chord  | p=[1×1:dc,2×2:balance,3×3:dct,5×5:dct,7×7:dct,11×11:dct,13×13:dct,17×17:dct,19×19:dct,23×23:dct,29×29:dct,31×31:dct]  N=3359  foveal=1.15  edge=0.55 chord=0.12  sparse=0.95  phases=3×256</p>
+</header>
+<main>
+
+<div class="pair">
+  <figure>
+    <img src="pairs/00_input.png?t=1787907902" alt="input">
+    <figcaption>INPUT  syn_000.png</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/00_output.png?t=1787907902" alt="output">
+    <figcaption>OUTPUT  mse=0.0000</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/00_field.png?t=1787907902" alt="field">
+    <figcaption>FIELD  256</figcaption>
+  </figure>
+</div>
+<div class="pair">
+  <figure>
+    <img src="pairs/01_input.png?t=1787907902" alt="input">
+    <figcaption>INPUT  syn_001.png</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/01_output.png?t=1787907902" alt="output">
+    <figcaption>OUTPUT  mse=0.0000</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/01_field.png?t=1787907902" alt="field">
+    <figcaption>FIELD  256</figcaption>
+  </figure>
+</div>
+<div class="pair">
+  <figure>
+    <img src="pairs/02_input.png?t=1787907902" alt="input">
+    <figcaption>INPUT  syn_002.png</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/02_output.png?t=1787907902" alt="output">
+    <figcaption>OUTPUT  mse=0.0000</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/02_field.png?t=1787907902" alt="field">
+    <figcaption>FIELD  256</figcaption>
+  </figure>
+</div>
+<div class="pair">
+  <figure>
+    <img src="pairs/03_input.png?t=1787907902" alt="input">
+    <figcaption>INPUT  real_000.png</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/03_output.png?t=1787907902" alt="output">
+    <figcaption>OUTPUT  mse=0.0027</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/03_field.png?t=1787907902" alt="field">
+    <figcaption>FIELD  256</figcaption>
+  </figure>
+</div>
+<div class="pair">
+  <figure>
+    <img src="pairs/04_input.png?t=1787907902" alt="input">
+    <figcaption>INPUT  real_001.png</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/04_output.png?t=1787907902" alt="output">
+    <figcaption>OUTPUT  mse=0.0012</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/04_field.png?t=1787907902" alt="field">
+    <figcaption>FIELD  256</figcaption>
+  </figure>
+</div>
+<div class="pair">
+  <figure>
+    <img src="pairs/05_input.png?t=1787907902" alt="input">
+    <figcaption>INPUT  real_002.png</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/05_output.png?t=1787907902" alt="output">
+    <figcaption>OUTPUT  mse=0.0021</figcaption>
+  </figure>
+  <figure>
+    <img src="pairs/05_field.png?t=1787907902" alt="field">
+    <figcaption>FIELD  256</figcaption>
+  </figure>
+</div>
+</main>
+</body>
+</html>

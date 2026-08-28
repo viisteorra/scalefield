@@ -1,0 +1,19 @@
+v0.1 of scalefield with the 1000 or less parameters worked awesome at a low res.. It was really blurry. The model with x and i turned up just had these weird holes in the image..
+But the concept clearly works.
+Before we get to the official v1, we need to get some things established.
+The phasing division needs to be based on primes so that each division is on a different phase and never aligns with another phase.
+The 3 color channels can just be encoded into different phasing. Basically 3 different phases with about 256 different options each so that you can encode all 3 color channels into a single variable that can technically be broken up with fourier transform but we likely won't do anything like that to save space haha.
+Now all 3 color channels can be encoded into a single variable. These are the color phases.
+The color phases are inspired by the phasing nature of natural colors and the harmonics that emerge.
+Now the spatial phases are handled a little bit differently. The display is divided by primes. So to start you get brightness with a 1x1 square.. Then you do a 2x2 square phasing and get some kind of weight and balance.
+The phases climb through all the primes so that you get a ton of different phases. It has a few different interesting effects. One, the pixels at the outside of the screen are technically larger than the inner ones.
+And most importantly, the scaling works cleaner.
+So if we use about 27 or so different prime divisions we get to 1240x1240 resolution with way fewer neurons.
+Combine that with the color phasing thing and we're onto some wild shit.
+For the sake of this experiment, we don't have to go nearly to 1240x1240. Something near 360x360 is plenty.
+And then image generation needs to be handled by some kind of simple shader.
+Each matrix is prime x prime in a consecutive manner. Like 2x2, 3x3, 5x5, 7x7, 11x11, 13x13, etc.. The chord combinations created by the combination of all of these shaders creates the complex image.
+That's the start, all vector shaders should cover the entire screen and then the fragment shaders are where all the detail goes. We need shader functions that are specifically tuned to each matrix size.
+At this point, we should be able to create every possible combination of all the different basal prime matrixes and then when we combine them all the pieces we should get every possible combination.
+Now with this, lets create a full v1 attempt that uses a tiny parameter model and shaders.. 
+We'll have to use cpu shaders or somehow use the igpu on this device, and make the smallest possible parameter visual model.

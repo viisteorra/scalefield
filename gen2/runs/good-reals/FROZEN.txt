@@ -1,0 +1,20 @@
+Frozen ScaleGen2 REAL CLOUD — do not overwrite.
+This is the stills model that looked good (local mixes + coarse GMM).
+New work goes in scalefield/gen3/ (prime unfold / next-frame).
+Load stem: gen2/runs/good-reals/scalegen
+Do not train gen2 over this folder.
+
+Frozen at epoch 850, GMM=12, nll≈9.897, n=290 reals, k=32 kc=8, N_field=3359.
+
+status.json:
+{
+  "epoch": 850,
+  "tag": "stop",
+  "nll": 9.897393067725728,
+  "n_comp": 12,
+  "n_data": 290,
+  "k": 32,
+  "k_coarse": 8,
+  "formula": "ScaleGen2  z_coarse~GMM=12\u00d7N(8)  z_fine=W z_c+b  k=32 kc=8  N_field=3359"
+}
+

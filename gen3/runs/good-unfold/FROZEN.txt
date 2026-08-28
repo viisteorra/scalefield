@@ -1,0 +1,31 @@
+Frozen ScaleGen3 UNFOLD — do not overwrite.
+Working stills generator: ancestral prime unfold 1→31.
+Load stem: gen3/runs/good-unfold/scalegen
+Video next-frame is gen4/. Do not train over this folder.
+
+Frozen at epoch 220, prefix GMM=6, prefix≤3 (14), N=3359, last R² ~0.95.
+
+status.json:
+{
+  "epoch": 220,
+  "tag": "stop",
+  "nll": -32.26269008349126,
+  "n_comp": 6,
+  "n_data": 290,
+  "n_prefix": 14,
+  "prefix_last": 3,
+  "n_maps": 4562676,
+  "r2": {
+    "5": 0.7050345098483184,
+    "7": 0.7180561739996683,
+    "11": 0.8249263773749829,
+    "13": 0.8660841228237802,
+    "17": 0.8630855706241506,
+    "19": 0.9238817685675719,
+    "23": 0.9148299499679889,
+    "29": 0.9254335822187789,
+    "31": 0.9468129488295199
+  },
+  "formula": "UNFOLD  1\u21922\u21923\u21925\u21927\u219211\u219213\u219217\u219219\u219223\u219229\u219231  prefix\u22643 (14)  N=3359  maps=4562676  lastR2[19:0.92,23:0.91,29:0.93,31:0.95]  prefixGMM=6\u00d7N(14)"
+}
+

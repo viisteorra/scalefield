@@ -1,0 +1,11 @@
+{
+  "epoch": 563,
+  "n_comp": 15,
+  "nll": 32.632483885303095,
+  "k": 32,
+  "n_field": 3359,
+  "n_prior": 111855,
+  "resid": 0.0016080805685361444,
+  "tag": "stop",
+  "formula": "ScaleGen  c = \u03bc + B z  GMM=15\u00d7N(32)  N_field=3359  k=32  N_prior=110880  resid=0.0016  | C(u)=sum_p DCT_p(foveal(u); resample(S,p))\u00b7phase + edge + chord  | p=[1\u00d71:dc,2\u00d72:balance,3\u00d73:dct,5\u00d75:dct,7\u00d77:dct,11\u00d711:dct,13\u00d713:dct,17\u00d717:dct,19\u00d719:dct,23\u00d723:dct,29\u00d729:dct,31\u00d731:dct]  N=3359  foveal=1.15  edge=0.55 chord=0.12  sparse=0.26  phases=3\u00d7256"
+}

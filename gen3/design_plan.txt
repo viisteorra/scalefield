@@ -1,0 +1,26 @@
+ScaleGen3 — unfold the primes. Not noise.
+
+gen2 (frozen at gen2/runs/good-reals) still looks good as a stills cloud.
+This is a new version. Do not train over gen2 or the trippy GMM.
+
+The field c is already a stack of populated p×p DCT matrices:
+  1×1, 2×2, 3×3, 5×5, …, 31×31.
+Generation is ancestral: draw the smallest lattices, then each next
+prime is a ridge map of everything smaller.
+
+  c_<p  →  c_p = W_p c_<p + b_p + ε σ_p
+
+No giant noise image. Residual ε is only the part the smaller primes
+could not determine. Prefix (1,2,3) is a tiny GMM so there is something
+to sample; 5→31 is unfold.
+
+"Next frame" is the same idea along time:
+  lerp two prefixes, unfold each tick.
+  That is the video — the picture coming into focus, then drifting
+  toward another populated field — without mixing unrelated high-k
+  coefficients.
+
+Train only this job. Field is frozen (v1 sharp, N=3359).
+Fit is closed-form ridge per prime + EM on the 14-D prefix.
+Watch board: unfold filmstrip of a generated sample, unfold of a
+real prefix (should resemble the photo), and a prefix-morph video row.

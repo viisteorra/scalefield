@@ -1,0 +1,12 @@
+ScaleGen v2 — coarse GMM + predicted fine PCA.
+
+v1 field is frozen (primes through 31, N=3359).
+The cool GMM v1 lives at gen/runs/cool-gmm/ — don't touch it.
+
+v2 transform:
+  z = PCA(c)           # frozen after fit
+  z_coarse = z[:k_c]   # structure (default 8)
+  z_fine   ≈ W z_coarse + b
+  sample: GMM on z_coarse, then predict fine, decode
+
+Train only GMM on coarse z (CPU, long). Watcher shows samples.

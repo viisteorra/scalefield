@@ -1,0 +1,12 @@
+{
+  "formula": "C(u)=sum_ell W_{exp,gabor,const,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp,exp}((u-\u03bc)/r^ell) \u00b7 b[ell]  | x=32 ch=3 i=24 r=0.88  N=2304 sparse=0.03",
+  "nparams": 2304,
+  "x": 32,
+  "i": 24,
+  "r": 0.88,
+  "epoch": 172,
+  "val_mse": 0.0067508348278961525,
+  "ckpt_val": 0.0026425672909201306,
+  "ckpt": "/home/fish/scalefield/runs/live/best.npz",
+  "mtime": 1787847722.9243734
+}

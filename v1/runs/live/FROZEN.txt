@@ -1,0 +1,4 @@
+Frozen ScaleField v1 codec. Do not overwrite.
+N=3359 prime-lattice DCT (1²…31²), val MSE ≈ 0.00044 at 96px.
+Load: v1/runs/live/best.npz
+Generation experiments live in gen / gen2 / gen3 — not here.
